@@ -93,3 +93,47 @@ h1 {
 .play-button:hover {
     background: #2ecc71;
 }
+
+.settings-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.setting {
+    margin-bottom: 15px;
+}
+
+.setting input, .setting select {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: #222;
+    color: white;
+    border-radius: 5px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.save {
+    background: limegreen;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+}
+
+.reset {
+    background: red;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+}
