@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReUnlocked</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>ReUnlocked</h1>
+        <a href="settings.html" class="settings-btn">⚙ Settings</a>
+    </header>
+
+    <input type="text" id="search" placeholder="Search games..." onkeyup="filterGames()">
+
+    <div class="game-grid" id="gameGrid">
+        <!-- Example Games -->
+        <div class="game-card"><span>Among Us</span><button>Play</button></div>
+        <div class="game-card"><span>1v1.lol</span><button>Play</button></div>
+        <div class="game-card"><span>Baldi's Basics</span><button>Play</button></div>
+        <div class="game-card"><span>Bloons TD</span><button>Play</button></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
