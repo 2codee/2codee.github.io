@@ -1,13 +1,18 @@
 // Search Function
-function filterGames() {
-    let searchQuery = document.getElementById("search").value.toLowerCase();
-    let games = document.getElementsByClassName("game-card");
+document.getElementById('search').addEventListener('input', function() {
+    let query = this.value.toLowerCase();
+    let games = document.querySelectorAll('.game-card');
 
-    for (let game of games) {
-        let gameName = game.innerText.toLowerCase();
-        game.style.display = gameName.includes(searchQuery) ? "block" : "none";
-    }
-}
+    games.forEach(game => {
+        let title = game.querySelector('h2').textContent.toLowerCase();
+        if (title.includes(query)) {
+            game.style.display = "block";
+        } else {
+            game.style.display = "none";
+        }
+    });
+});
+
 
 // Save Settings
 function saveSettings() {
