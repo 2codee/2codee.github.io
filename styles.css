@@ -49,7 +49,7 @@ h1 {
 
 .game-card {
     width: 320px; /* Tailwind w-80 equivalent */
-    height: 180px; /* Maintain a good aspect ratio */
+    height: 180px; /* Maintain aspect ratio */
     background: #f5f5f5; /* Tailwind bg-base-100 equivalent */
     border-radius: 10px;
     overflow: hidden;
@@ -62,38 +62,45 @@ h1 {
 .game-card img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the image covers the entire card */
+    object-fit: cover; /* Ensures the image fills the card */
     object-position: center; /* Centers the image */
-    filter: brightness(80%); /* Lighter transparency */
+    filter: brightness(50%); /* Darker background for better text contrast */
     transition: 0.3s;
 }
 
 .game-card:hover img {
-    filter: brightness(60%);
+    filter: brightness(40%);
 }
 
 .game-overlay {
     position: absolute;
-    bottom: 10px;
-    left: 0;
     width: 100%;
-    text-align: center;
     color: white;
+    text-align: left;
+    padding: 10px;
 }
 
+/* Game title: Slightly offset from top-left */
 .game-overlay h2 {
+    position: absolute;
+    top: 15px;
+    left: 15px;
     margin: 0;
     font-size: 1.2rem;
+    font-weight: bold;
 }
 
+/* Play button: Centered at the top */
 .play-button {
-    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
     background: limegreen;
     color: white;
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 8px 16px;
     border-radius: 50px; /* Very round button */
-    margin-top: 5px;
     font-weight: bold;
     transition: 0.3s;
 }
