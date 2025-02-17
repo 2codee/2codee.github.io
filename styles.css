@@ -93,8 +93,9 @@ h1 {
 /* Play button: Centered at the top */
 .play-button {
     position: absolute;
-    bottom: 0;
-    right: 15px;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
     background: limegreen;
     color: white;
     text-decoration: none;
