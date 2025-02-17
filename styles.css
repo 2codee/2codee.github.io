@@ -94,7 +94,7 @@ h1 {
 .play-button {
     position: absolute;
     bottom: 5px;
-    right: 5px;
+    right: 10px;
     background: limegreen;
     color: white;
     text-decoration: none;
