@@ -46,9 +46,11 @@ header {
 }
 
 .search-container {
+   flex-grow: 1;
+    text-align: center;
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+    transition: 0.3s;
 }
 
 .search-bar {
@@ -66,14 +68,16 @@ header {
 }
 
 .settings-button {
+    position: absolute;
+    right: 20px;
     background: none;
     border: none;
     cursor: pointer;
+    width: 32px;
+    height: 32px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
 }
 
 .settings-button svg {
@@ -222,4 +226,8 @@ header {
 .settings-button img {
     width: 24px;
     height: 24px;
+}
+
+.settings-menu-open .search-container {
+    transform: translateX(-100px);
 }
