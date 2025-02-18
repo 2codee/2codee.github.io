@@ -53,7 +53,7 @@ header {
 }
 
 .search-bar {
-    width: 300px;
+    width: 320px;
     padding: 12px;
     border-radius: 25px;
     border: 2px solid #444;
@@ -63,6 +63,7 @@ header {
     color: white;
     text-align: center;
     transition: 0.3s;
+    margin: 0 auto;
 }
 
 .settings-button {
@@ -78,9 +79,8 @@ header {
 
 /* Game grid layout */
 .game-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 15px;
     padding: 20px;
     max-width: 1400px;
@@ -89,7 +89,7 @@ header {
 
 /* Game card */
 .game-card {
-    width: 320px;
+    width: 320%;
     height: 180px;
     background: #1a1a1a;
     border-radius: 15px;
@@ -116,7 +116,7 @@ header {
     left: 10px;
     color: white;
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 .play-button {
@@ -126,11 +126,11 @@ header {
     background: #00ff88;
     color: black;
     text-decoration: none;
-    padding: 8px 16px;
+    padding: 10px 18px;
     border-radius: 50px;
     font-weight: bold;
     transition: 0.3s;
-    font-size: 0.9rem;
+    font-size: 1rem;
     border: none;
     cursor: pointer;
 }
@@ -145,11 +145,12 @@ header {
     position: fixed;
     top: 0;
     right: 0;
-    width: 320px;
+    width: 350px;
     height: 100%;
     background: #1a1a1a;
     padding: 20px;
     overflow-y: auto;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
 }
 
 .settings-menu input {
@@ -172,11 +173,11 @@ header {
     background: #00ff88;
     color: black;
     text-decoration: none;
-    padding: 8px 16px;
+    padding: 12px 20px;
     border-radius: 50px;
     font-weight: bold;
     transition: 0.3s;
-    font-size: 0.9rem;
+    font-size: 1rem;
     border: none;
     cursor: pointer;
     display: block;
@@ -195,9 +196,10 @@ header {
     background: red;
     color: white;
     border: none;
-    padding: 5px 10px;
+    padding: 8px 12px;
     cursor: pointer;
     border-radius: 5px;
+    font-size: 1rem;
 }
 
 .close-button:hover {
