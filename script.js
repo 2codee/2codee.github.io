@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const settingsButton = document.querySelector(".settings-button");
     const settingsMenu = document.querySelector(".settings-menu");
     const applyButton = document.querySelector(".apply-button");
+    const closeButton = document.querySelector(".close-button");
 
     searchBar.addEventListener("input", function () {
         const searchText = searchBar.value.toLowerCase().trim();
@@ -15,7 +16,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     settingsButton.addEventListener("click", function () {
-        settingsMenu.style.display = settingsMenu.style.display === "block" ? "none" : "block";
+        settingsMenu.style.display = "block";
+    });
+
+    closeButton.addEventListener("click", function () {
+        settingsMenu.style.display = "none";
     });
 
     applyButton.addEventListener("click", function () {
