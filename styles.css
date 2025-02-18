@@ -8,46 +8,21 @@ body {
     padding: 0;
 }
 
-/* Navbar container */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-    max-width: 1200px;
-    margin: auto;
-}
-
-/* Settings button */
-.settings-btn {
-    background: #333;
-    color: white;
-    text-decoration: none;
-    padding: 8px 15px;
-    border-radius: 10px;
-    font-size: 0.9rem;
-    transition: 0.3s;
-}
-
-.settings-btn:hover {
-    background: #555;
-}
-
 /* Search bar container */
 .search-container {
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .search-bar {
-    width: 180px;  /* Shorter width */
-    padding: 6px 10px;
-    border-radius: 15px;
-    border: 1px solid #555;
+    width: 300px;
+    padding: 12px;
+    border-radius: 25px;
+    border: 2px solid #444;
     outline: none;
-    font-size: 0.9rem;
-    background: #222;
+    font-size: 1rem;
+    background: #111;
     color: white;
     text-align: center;
     transition: 0.3s;
@@ -55,32 +30,37 @@ body {
 
 .search-bar::placeholder {
     color: #aaa;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
 }
 
-/* Game grid */
+/* Game grid layout */
 .game-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
     padding: 20px;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: auto;
 }
 
 /* Game card */
 .game-card {
-    width: 300px;
-    height: 180px;
+    width: 220px;
+    height: 140px;
     background: #1a1a1a;
-    border-radius: 10px;
+    border-radius: 15px;
     overflow: hidden;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
+    transition: 0.3s;
+}
+
+.game-card:hover {
+    background: #222;
 }
 
 /* Game image */
@@ -89,7 +69,7 @@ body {
     height: 100%;
     object-fit: cover;
     object-position: center;
-    filter: brightness(50%); /* Darker for readability */
+    filter: brightness(50%);
     transition: 0.3s;
 }
 
@@ -100,7 +80,7 @@ body {
 /* Game title */
 .game-title {
     position: absolute;
-    top: 12px;
+    top: 10px;
     left: 15px;
     color: white;
     font-size: 1rem;
@@ -112,7 +92,7 @@ body {
 .play-button {
     position: absolute;
     bottom: 10px;
-    left: 15px;
+    right: 10px;
     background: #00ff88;
     color: black;
     text-decoration: none;
@@ -125,71 +105,4 @@ body {
 
 .play-button:hover {
     background: #00cc66;
-}
-
-/* Search bar */
-.search-container {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.search-bar {
-    width: 250px; /* Shorter width */
-    padding: 10px;
-    border-radius: 20px;
-    border: none;
-    outline: none;
-    font-size: 1rem;
-    background: #222;
-    color: white;
-    text-align: center;
-}
-
-/* Placeholder text color */
-.search-bar::placeholder {
-    color: #aaa;
-}
-
-.settings-container {
-    max-width: 600px;
-    margin: 50px auto;
-    background: #1e1e1e;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.setting {
-    margin-bottom: 15px;
-}
-
-.setting input, .setting select {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    background: #222;
-    color: white;
-    border-radius: 5px;
-}
-
-.buttons {
-    display: flex;
-    justify-content: space-between;
-}
-
-.save {
-    background: limegreen;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    color: white;
-}
-
-.reset {
-    background: red;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    color: white;
 }
