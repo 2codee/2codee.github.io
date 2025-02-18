@@ -3,12 +3,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const gameCards = document.querySelectorAll(".game-card");
 
     searchBar.addEventListener("input", function () {
-        const searchText = searchBar.value.toLowerCase();
+        const searchText = searchBar.value.toLowerCase().trim(); // Get search input & normalize
 
         gameCards.forEach(card => {
             const title = card.querySelector(".game-title").textContent.toLowerCase();
+            
+            // Show/hide cards based on matching text
             if (title.includes(searchText)) {
-                card.style.display = "block"; // Show matching games
+                card.style.display = "flex"; // Show matching games
             } else {
                 card.style.display = "none"; // Hide non-matching games
             }
