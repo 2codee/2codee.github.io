@@ -169,7 +169,7 @@ header {
 
 .settings-menu input {
     width: 100%;
-    padding: 14px;
+    padding: 14px 24px;
     border-radius: 25px;
     border: 2px solid #444;
     outline: none;
