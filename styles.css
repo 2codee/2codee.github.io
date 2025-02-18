@@ -70,11 +70,21 @@ header {
     background: none;
     border: none;
     cursor: pointer;
-}
-
-.settings-button img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 40px;
     height: 40px;
+}
+
+.settings-button svg {
+    width: 24px;
+    height: 24px;
+    stroke: currentColor;
+    stroke-width: 2;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
 }
 
 /* Game grid layout */
