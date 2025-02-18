@@ -8,7 +8,7 @@ body {
     padding: 0;
 }
 
-/* Top navigation bar */
+/* Navbar container */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -41,19 +41,21 @@ body {
 }
 
 .search-bar {
-    width: 200px;
-    padding: 8px;
+    width: 180px;  /* Shorter width */
+    padding: 6px 10px;
     border-radius: 15px;
-    border: none;
+    border: 1px solid #555;
     outline: none;
-    font-size: 1rem;
+    font-size: 0.9rem;
     background: #222;
     color: white;
     text-align: center;
+    transition: 0.3s;
 }
 
 .search-bar::placeholder {
     color: #aaa;
+    font-size: 0.85rem;
 }
 
 /* Game grid */
@@ -87,18 +89,18 @@ body {
     height: 100%;
     object-fit: cover;
     object-position: center;
-    filter: brightness(60%);
+    filter: brightness(50%); /* Darker for readability */
     transition: 0.3s;
 }
 
 .game-card:hover img {
-    filter: brightness(50%);
+    filter: brightness(40%);
 }
 
 /* Game title */
 .game-title {
     position: absolute;
-    top: 10px;
+    top: 12px;
     left: 15px;
     color: white;
     font-size: 1rem;
@@ -123,4 +125,71 @@ body {
 
 .play-button:hover {
     background: #00cc66;
+}
+
+/* Search bar */
+.search-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    width: 250px; /* Shorter width */
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    background: #222;
+    color: white;
+    text-align: center;
+}
+
+/* Placeholder text color */
+.search-bar::placeholder {
+    color: #aaa;
+}
+
+.settings-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.setting {
+    margin-bottom: 15px;
+}
+
+.setting input, .setting select {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: #222;
+    color: white;
+    border-radius: 5px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.save {
+    background: limegreen;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+}
+
+.reset {
+    background: red;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
 }
