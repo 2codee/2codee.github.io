@@ -6,6 +6,18 @@ document.addEventListener("DOMContentLoaded", function () {
     const applyButton = document.querySelector(".apply-button");
     const closeButton = document.querySelector(".close-button");
 
+    if (settingsMenu) {
+        settingsMenu.style.display = "none";
+    }
+
+    settingsButton.addEventListener("click", function () {
+        settingsMenu.style.display = "block";
+    });
+
+    closeButton.addEventListener("click", function () {
+        settingsMenu.style.display = "none";
+    });
+    
     searchBar.addEventListener("input", function () {
         const searchText = searchBar.value.toLowerCase().trim();
 
