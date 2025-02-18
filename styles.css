@@ -219,3 +219,8 @@ header {
 .close-button:hover {
     background: darkred;
 }
+
+.settings-button img {
+    width: 24px;
+    height: 24px;
+}
