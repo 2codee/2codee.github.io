@@ -236,3 +236,16 @@ header {
 .settings-menu-open .search-container {
     transform: translateX(-100px);
 }
+
+/* Footer */
+footer {
+    margin-top: auto;
+    padding: 10px 0;
+    text-align: center;
+    background: #1a1a1a;
+}
+
+.footer-text {
+    color: white;
+    font-size: 0.8rem;
+}
