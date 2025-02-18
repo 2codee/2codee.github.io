@@ -1,18 +1,20 @@
-// Search Function
-document.getElementById('search').addEventListener('input', function() {
-    let query = this.value.toLowerCase();
-    let games = document.querySelectorAll('.game-card');
+document.addEventListener("DOMContentLoaded", function () {
+    const searchBar = document.querySelector(".search-bar");
+    const gameCards = document.querySelectorAll(".game-card");
 
-    games.forEach(game => {
-        let title = game.querySelector('h2').textContent.toLowerCase();
-        if (title.includes(query)) {
-            game.style.display = "block";
-        } else {
-            game.style.display = "none";
-        }
+    searchBar.addEventListener("input", function () {
+        const searchText = searchBar.value.toLowerCase();
+
+        gameCards.forEach(card => {
+            const title = card.querySelector(".game-title").textContent.toLowerCase();
+            if (title.includes(searchText)) {
+                card.style.display = "block"; // Show matching games
+            } else {
+                card.style.display = "none"; // Hide non-matching games
+            }
+        });
     });
 });
-
 
 // Save Settings
 function saveSettings() {
