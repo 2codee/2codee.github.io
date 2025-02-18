@@ -89,7 +89,7 @@ header {
 
 /* Game card */
 .game-card {
-    width: 320%;
+    width: 320px;
     height: 180px;
     background: #1a1a1a;
     border-radius: 15px;
