@@ -9,6 +9,20 @@ body {
     overflow-x: hidden;
 }
 
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00ff88;
+    border-radius: 10px;
+}
+
 /* Header */
 header {
     display: flex;
@@ -21,6 +35,8 @@ header {
 .logo {
     display: flex;
     align-items: center;
+    font-weight: bold;
+    font-size: 1.5rem;
 }
 
 .logo img {
@@ -32,6 +48,8 @@ header {
 .search-container {
     flex-grow: 1;
     text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 .search-bar {
@@ -77,9 +95,6 @@ header {
     border-radius: 15px;
     overflow: hidden;
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     transition: 0.3s;
 }
 
@@ -87,13 +102,27 @@ header {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    filter: brightness(50%);
     transition: 0.3s;
 }
 
-/* Play button & Apply button */
-.play-button, .apply-button {
+.game-card:hover img {
+    filter: brightness(30%);
+}
+
+.game-title {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.play-button {
     position: absolute;
     bottom: 10px;
+    right: 10px;
     background: #00ff88;
     color: black;
     text-decoration: none;
@@ -106,7 +135,7 @@ header {
     cursor: pointer;
 }
 
-.play-button:hover, .apply-button:hover {
+.play-button:hover {
     background: #00cc66;
 }
 
@@ -116,7 +145,7 @@ header {
     position: fixed;
     top: 0;
     right: 0;
-    width: 300px;
+    width: 320px;
     height: 100%;
     background: #1a1a1a;
     padding: 20px;
@@ -135,4 +164,42 @@ header {
     text-align: center;
     transition: 0.3s;
     margin-bottom: 10px;
+}
+
+.apply-button {
+    position: relative;
+    bottom: 0;
+    background: #00ff88;
+    color: black;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: 0.3s;
+    font-size: 0.9rem;
+    border: none;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.apply-button:hover {
+    background: #00cc66;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.close-button:hover {
+    background: darkred;
 }
