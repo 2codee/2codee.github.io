@@ -26,31 +26,11 @@ h1 {
     border-radius: 5px;
 }
 
-.search-container {
-    text-align: center;
-    margin: 20px;
-}
-
-#search {
-    width: 20%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background: #222;
-    color: white;
-}
-
-.game-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 10px;
-    padding: 20px;
-}
-
+/* Game card styling */
 .game-card {
-    width: 320px; /* Tailwind w-80 equivalent */
-    height: 180px; /* Maintain aspect ratio */
-    background: #f5f5f5; /* Tailwind bg-base-100 equivalent */
+    width: 320px; /* Tailwind w-80 */
+    height: 180px;
+    background: #1a1a1a; /* Dark background */
     border-radius: 10px;
     overflow: hidden;
     position: relative;
@@ -59,53 +39,71 @@ h1 {
     align-items: center;
 }
 
+/* Game image */
 .game-card img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the image fills the card */
-    object-position: center; /* Centers the image */
-    filter: brightness(50%); /* Darker background for better text contrast */
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(60%); /* Darker for better text readability */
     transition: 0.3s;
 }
 
 .game-card:hover img {
-    filter: brightness(40%);
+    filter: brightness(50%);
 }
 
-.game-overlay {
+/* Game title */
+.game-title {
     position: absolute;
-    width: 100%;
-    color: white;
-    text-align: left;
-    padding: 10px;
-}
-
-/* Game title: Slightly offset from top-left */
-.game-overlay h2 {
-    position: absolute;
-    top: 15px;
+    top: 12px;
     left: 15px;
-    margin: 0;
+    color: white;
     font-size: 1.2rem;
     font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
-/* Play button: Bottom-left */
+/* Play button */
 .play-button {
     position: absolute;
-    bottom: 10px;
-    left: 15px;
-    background: limegreen;
-    color: white;
+    bottom: 12px;
+    right: 15px;
+    background: #00ff88;
+    color: black;
     text-decoration: none;
-    padding: 8px 16px;
-    border-radius: 50px; /* Very round button */
+    padding: 8px 18px;
+    border-radius: 50px;
     font-weight: bold;
     transition: 0.3s;
+    font-size: 1rem;
 }
 
 .play-button:hover {
-    background: #2ecc71;
+    background: #00cc66;
+}
+
+/* Search bar */
+.search-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    width: 250px; /* Shorter width */
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    background: #222;
+    color: white;
+    text-align: center;
+}
+
+/* Placeholder text color */
+.search-bar::placeholder {
+    color: #aaa;
 }
 
 .settings-container {
